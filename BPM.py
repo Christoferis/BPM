@@ -13,7 +13,7 @@ endtime = float()
 #main window
 root = Tk()
 root.title("Tap BPM")
-root.geometry("300x75")
+root.geometry("300x150")
 
 #callback for time
 def BPM(bpmtxt):
@@ -44,8 +44,8 @@ def GUI():
     #text
     Label(root, text="Press the Button to tap BPM").pack()
     #Button and BPM Label
-    bpm = Label(root, background="grey", foreground="white", text="Tap to start")
-    but = Button(root, text="Press me", command=lambda: BPM(bpm))
+    bpm = Label(root, background="grey", foreground="white", text="Tap to start", pady=5)
+    but = Button(root, text="Press me", command=lambda: BPM(bpm), height=4, width=8, background="green", foreground="white")
     but.pack()
     bpm.pack()
 
